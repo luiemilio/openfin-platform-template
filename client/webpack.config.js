@@ -18,7 +18,7 @@ module.exports = [
 		},
 		output: {
 			filename: 'app-bundle.js',
-			path: path.resolve(__dirname, '..', 'public', 'js')
+			path: path.resolve(__dirname, '..', 'build')
 		},
 		experiments: {
 			topLevelAwait: true
@@ -41,7 +41,7 @@ module.exports = [
 		},
 		output: {
 			filename: 'provider-bundle.js',
-			path: path.resolve(__dirname, '..', 'public', 'js')
+			path: path.resolve(__dirname, '..', 'build')
 		},
 		experiments: {
 			topLevelAwait: true
