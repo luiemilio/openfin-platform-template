@@ -1,0 +1,31 @@
+{
+	"name": "openfin-fdc3-conformance",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "npm run build-server & npm run build-client",
+		"build-server": "tsc --project ./server",
+		"build-client": "webpack build --config ./client/webpack.config.js --mode=development",
+		"build-client-prod": "webpack build --config ./client/webpack.config.js --mode=production",
+		"watch": "webpack watch --config ./client/webpack.config.js --mode=development",
+		"start": "npm run server",
+		"client": "openfin -l -c http://localhost:5050/manifest.fin.json",
+		"server": "node ./server/build/index.js",
+		"kill": "npm --prefix ../../common/ run kill",
+		"validate": "npm --prefix ../../../ run validate"
+	},
+	"author": "OpenFin Inc.",
+	"license": "SEE LICENSE IN LICENSE.MD",
+	"devDependencies": {
+		"@openfin/core": "31.74.3",
+		"ts-loader": "^9.3.0",
+		"typescript": "^4.8.4",
+		"webpack": "^5.72.1",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"express": "^4.18.1",
+		"openfin-cli": "latest"
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"runtime": {
+		"arguments": "--v=1 --inspect",
+		"version": "stable"
+	},
+	"platform": {
+		"icon": "http://localhost:5050/assets/icon.png",
+		"uuid": "openfin-platform-template-ts",
+		"autoShow": true,
+		"providerUrl": "http://localhost:5050/provider.html",
+		"apiDiagnostics": false,
+		"defaultWindowOptions": {
+			"saveWindowState": false,
+			"showBackgroundImages": true,
+			"backgroundThrottling": true,
+			"fdc3InteropApi": "1.2"
+		},
+		"defaultViewOptions": {
+			"fdc3InteropApi": "1.2"
+		},
+		"interopBrokerConfiguration": {
+			"logging": {
+				"beforeAction": {
+					"enabled": false
+				},
+				"afterAction": {
+					"enabled": false
+				}
+			}
+		}
+	},
+	"snapshot": {
+        "windows": [
+            {
+                "name": "openfin-platform-template-window",
+                "layout": {
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "http://localhost:5050/app.html"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
