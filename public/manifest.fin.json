@@ -1,6 +1,6 @@
 {
 	"runtime": {
-		"arguments": "--v=1 --inspect",
+		"arguments": "--v=1 --inspect --disable-gpu",
 		"version": "canary"
 	},
 	"platform": {

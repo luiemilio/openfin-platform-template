@@ -2,7 +2,7 @@ import * as OpenFin from "@openfin/core/src/OpenFin";
 
 declare const fin: OpenFin.Fin<"window">;
 
-// const p = fin.Platform.getCurrentSync();
+const p = fin.Platform.getCurrentSync();
 
 // p.on('platform-api-ready', async () => {
 //     const viewCreationPromises = [...Array(200).keys()].map(async (_, i) => {
@@ -27,5 +27,10 @@ declare const fin: OpenFin.Fin<"window">;
 //     await Promise.all(viewCreationPromises);
 // });
 
+
+
 await fin.Platform.init();
 
+// const a = fin.Application.getCurrentSync();
+
+// await a.on('window-auth-requested', console.log);
