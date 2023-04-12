@@ -1,50 +1,42 @@
-const path = require('path');
+const resolve = require('path').resolve;
+
+const path = resolve(__dirname, '..', 'public', 'build');
+const extensions = ['.tsx', '.ts', '.js'];
+const experiments = { topLevelAwait: true };
+const devtool = 'inline-source-map';
+const rules = [
+	{
+		test: /\.tsx?$/,
+		use: 'ts-loader',
+		exclude: /node_modules/
+	}
+]
 
 module.exports = [
 	{
 		entry: './client/src/app.ts',
-		devtool: 'inline-source-map',
-		module: {
-			rules: [
-				{
-					test: /\.tsx?$/,
-					use: 'ts-loader',
-					exclude: /node_modules/
-				}
-			]
-		},
+		devtool,
+		module: { rules },
 		resolve: {
-			extensions: ['.tsx', '.ts', '.js']
+			extensions
 		},
 		output: {
 			filename: 'app-bundle.js',
-			path: path.resolve(__dirname, '..', 'build')
+			path
 		},
-		experiments: {
-			topLevelAwait: true
-		}
+		experiments
 	},
 	{
 		entry: './client/src/provider.ts',
-		devtool: 'inline-source-map',
-		module: {
-			rules: [
-				{
-					test: /\.tsx?$/,
-					use: 'ts-loader',
-					exclude: /node_modules/
-				}
-			]
-		},
+		devtool,
+		module: { rules },
 		resolve: {
-			extensions: ['.tsx', '.ts', '.js']
+			extensions
 		},
 		output: {
 			filename: 'provider-bundle.js',
-			path: path.resolve(__dirname, '..', 'build')
+			path
 		},
-		experiments: {
-			topLevelAwait: true
-		}
+		experiments
 	}
 ];
