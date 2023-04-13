@@ -29,7 +29,7 @@
 			}
 		}
 	},
-	"snapshot": {
+	"_snapshot": {
         "windows": [
             {
                 "name": "openfin-platform-template-window",
