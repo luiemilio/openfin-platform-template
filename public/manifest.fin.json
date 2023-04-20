@@ -1,7 +1,8 @@
 {
 	"runtime": {
-		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"arguments": "--v=1 --inspect --process-logging-interval=1",
+		"_arguments": "--inspect",
+		"version": "canary"
 	},
 	"platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
@@ -29,7 +30,7 @@
 			}
 		}
 	},
-	"snapshot": {
+	"_snapshot": {
         "windows": [
             {
                 "name": "openfin-platform-template-window",
