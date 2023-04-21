@@ -1,7 +1,7 @@
 {
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"version": "canary"
 	},
 	"platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
