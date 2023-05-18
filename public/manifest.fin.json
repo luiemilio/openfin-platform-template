@@ -1,9 +1,20 @@
 {
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"version": "canary"
 	},
-	"platform": {
+	"startup_app": {
+		"uuid": "foo",
+		"url": "http://localhost:5050/app.html",
+		"contentNavigation": {
+			"_allowlist": ["http://example.com"],
+			"_denylist": ["http://example.com"],
+			"_whitelist": ["http://example.com", "http://localhost:5050/app.html"],
+			"_blacklist": ["https://example.org/foo/bar.html"]
+		},
+		"autoShow": true
+	},
+	"_platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
 		"uuid": "openfin-platform-template-ts",
 		"autoShow": true,
@@ -16,7 +27,13 @@
 			"fdc3InteropApi": "1.2"
 		},
 		"defaultViewOptions": {
-			"fdc3InteropApi": "1.2"
+			"fdc3InteropApi": "1.2",
+			"contentNavigation": {
+				"_allowlist": ["http://localhost:5050/app.html"],
+				"_denylist": ["https://www.snapple.com/products"],
+				"whitelist": ["https://whitelisted.example"],
+				"_blacklist": ["https://example.org/foo/bar.html"]
+			}
 		},
 		"interopBrokerConfiguration": {
 			"logging": {
@@ -29,7 +46,7 @@
 			}
 		}
 	},
-	"snapshot": {
+	"_snapshot": {
         "windows": [
             {
                 "name": "openfin-platform-template-window",
@@ -43,6 +60,7 @@
                                     "type": "component",
                                     "componentName": "view",
                                     "componentState": {
+										"name": "foo",
                                         "url": "http://localhost:5050/app.html"
                                     }
                                 }
