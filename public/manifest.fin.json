@@ -4,10 +4,10 @@
 		"version": "stable"
 	},
 	"platform": {
-		"icon": "http://localhost:5050/assets/icon.png",
+		"icon": "http://localhost:5555/assets/icon.png",
 		"uuid": "openfin-platform-template-ts",
 		"autoShow": true,
-		"providerUrl": "http://localhost:5050/provider.html",
+		"providerUrl": "http://localhost:5555/provider.html",
 		"apiDiagnostics": false,
 		"defaultWindowOptions": {
 			"saveWindowState": false,
@@ -43,7 +43,7 @@
                                     "type": "component",
                                     "componentName": "view",
                                     "componentState": {
-                                        "url": "http://localhost:5050/app.html"
+                                        "url": "https://app.powerbi.com/groups/me/reports/00e7ac1a-e3be-459d-a62e-bcf5aedd9563/ReportSectiond4d6d28f100a05d02bb1"
                                     }
                                 }
                             ]

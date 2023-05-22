@@ -10,7 +10,8 @@
 		"build-client-prod": "webpack build --config ./client/webpack.config.js --mode=production",
 		"watch": "webpack watch --config ./client/webpack.config.js --mode=development",
 		"start": "npm run server",
-		"client": "openfin -l -c http://localhost:5050/manifest.fin.json",
+		"client": "openfin -l -c http://localhost:5555/manifest.fin.json",
+		"rbcclient": "openfin -l -c http://localhost:5555/manifest-rbc.json",
 		"server": "node ./server/build/index.js",
 		"kill": "npm --prefix ../../common/ run kill",
 		"validate": "npm --prefix ../../../ run validate"

@@ -1,0 +1,49 @@
+{
+    "licenseKey": "e55352c2-12a3-45f3-a047-6c72d2b369ef",
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "open-fin-test-app",
+        "icon": "http://localhost:5555/favicon.ico",
+        "description": "open-fin-test-app",
+        "url": "http://localhost:5555/index.html",
+        "uuid": "test-manifest",
+        "autoShow": true,
+        "frame": true,
+        "maximizable": false,
+        "defaultWidth": 300,
+        "defaultHeight": 300,
+        "defaultCentered": false,
+        "shadow": false,
+        "saveWindowState": false,
+        "resizable": true,
+        "webSecurity": false,
+        "permissions": {
+            "ExternalWindow": {
+                "wrap": true
+            },
+            "System": {
+                "downloadAsset": true,
+                "getAllExternalWindows": true,
+                "launchExternalProcess": true,
+                "readRegistryValue": false,
+                "terminateExternalProcess": true
+            },
+            "webAPIs": [
+                "clipboard-write",
+                "clipboard-sanitized-write",
+                "openExternal"
+            ]
+        }
+    },
+    "runtime": {
+        "arguments": "--no-sandbox  --force-device-scale-factor=1",
+        "version": "stable"
+    },
+    "dialogSettings": {
+       
+    },
+	"supportInformation": {
+        
+    },
+    "appAssets": []
+}

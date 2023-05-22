@@ -1,0 +1,51 @@
+{
+    "licenseKey": "e55352c2-12a3-45f3-a047-6c72d2b369ef",
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "test-bridge",
+        "icon": "http://localhost:5555/favicon.ico",
+        "description": "test-app",
+        "url": "http://localhost:5555/index.html",
+        "uuid": "test-app-1",
+        "autoShow": true,
+        "frame": true,
+        "maximizable": false,
+        "defaultWidth": 300,
+        "defaultHeight": 300,
+        "defaultLeft": 200,
+        "defaultTop": 100,
+        "defaultCentered": false,
+        "shadow": false,
+        "saveWindowState": false,
+        "resizable": true,
+        "webSecurity": false,
+        "permissions": {
+            "ExternalWindow": {
+                "wrap": true
+            },
+            "System": {
+                "downloadAsset": true,
+                "getAllExternalWindows": true,
+                "launchExternalProcess": true,
+                "readRegistryValue": false,
+                "terminateExternalProcess": true
+            },
+            "webAPIs": [
+                "clipboard-write",
+                "clipboard-sanitized-write",
+                "openExternal"
+            ]
+        }
+    },
+    "runtime": {
+        "arguments": "--no-sandbox  --force-device-scale-factor=1 --v=1",
+        "version": "stable"
+    },
+    "dialogSettings": {
+        
+    },
+    "supportInformation": {
+       
+    },
+    "appAssets": []
+}
