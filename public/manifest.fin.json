@@ -1,7 +1,7 @@
 {
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"version": "canary"
 	},
 	"platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
@@ -12,11 +12,7 @@
 		"defaultWindowOptions": {
 			"saveWindowState": false,
 			"showBackgroundImages": true,
-			"backgroundThrottling": true,
-			"fdc3InteropApi": "1.2"
-		},
-		"defaultViewOptions": {
-			"fdc3InteropApi": "1.2"
+			"backgroundThrottling": true
 		},
 		"interopBrokerConfiguration": {
 			"logging": {
@@ -36,14 +32,25 @@
                 "layout": {
                     "content": [
                         {
-                            "type": "stack",
+                            "type": "row",
                             "id": "no-drop-target",
                             "content": [
                                 {
                                     "type": "component",
                                     "componentName": "view",
                                     "componentState": {
-                                        "url": "http://localhost:5050/app.html"
+                                        "url": "http://localhost:5050/app.html",
+										"name": "foo1",
+										"fdc3InteropApi": "2.0"
+                                    }
+                                },
+								{
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "http://localhost:5050/app.html",
+										"name": "foo2",
+										"fdc3InteropApi": "1.2"
                                     }
                                 }
                             ]
