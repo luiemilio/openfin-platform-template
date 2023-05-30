@@ -1,7 +1,7 @@
 {
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"version": "canary"
 	},
 	"platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
@@ -16,7 +16,10 @@
 			"fdc3InteropApi": "1.2"
 		},
 		"defaultViewOptions": {
-			"fdc3InteropApi": "1.2"
+			"fdc3InteropApi": "1.2",
+			"contentNavigation": {
+				"denylist": ["http://example.com/foo/bar.html"]
+			}
 		},
 		"interopBrokerConfiguration": {
 			"logging": {
@@ -43,6 +46,7 @@
                                     "type": "component",
                                     "componentName": "view",
                                     "componentState": {
+										"name": "foo",
                                         "url": "http://localhost:5050/app.html"
                                     }
                                 }
