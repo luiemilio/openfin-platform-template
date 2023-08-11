@@ -1,5 +1,3 @@
-import * as OpenFin from "@openfin/core/src/OpenFin";
-
-declare const fin: OpenFin.Fin<"window">;
+import { fin } from "@openfin/core";
 
 await fin.Platform.init();
