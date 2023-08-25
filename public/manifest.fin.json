@@ -1,7 +1,7 @@
 {
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "stable"
+		"version": "canary"
 	},
 	"platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
@@ -12,45 +12,52 @@
 		"defaultWindowOptions": {
 			"saveWindowState": false,
 			"showBackgroundImages": true,
-			"backgroundThrottling": true,
-			"fdc3InteropApi": "1.2"
+			"backgroundThrottling": true
 		},
 		"defaultViewOptions": {
-			"fdc3InteropApi": "1.2"
-		},
-		"interopBrokerConfiguration": {
-			"logging": {
-				"beforeAction": {
-					"enabled": false
-				},
-				"afterAction": {
-					"enabled": false
+			"permissions": {
+				"webAPIs": [
+					"notifications",
+					"audio",
+					"video",
+					"hid"
+				],
+				"deviceAccess": {
+					"devices": [{ "vendorId": 1452, "productId": 591 }]
 				}
 			}
+		},
+		"permissions": {
+			"webAPIs": [
+				"notifications",
+				"audio",
+				"video",
+				"hid"
+			]
 		}
 	},
 	"snapshot": {
-        "windows": [
-            {
-                "name": "openfin-platform-template-window",
-                "layout": {
-                    "content": [
-                        {
-                            "type": "stack",
-                            "id": "no-drop-target",
-                            "content": [
-                                {
-                                    "type": "component",
-                                    "componentName": "view",
-                                    "componentState": {
-                                        "url": "http://localhost:5050/app.html"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        ]
-    }
+		"windows": [
+			{
+				"name": "openfin-platform-template-window",
+				"layout": {
+					"content": [
+						{
+							"type": "stack",
+							"id": "no-drop-target",
+							"content": [
+								{
+									"type": "component",
+									"componentName": "view",
+									"componentState": {
+										"url": "http://localhost:5050/app.html"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
 }
