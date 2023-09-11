@@ -1,9 +1,15 @@
 {
+	"startup_app": {
+        "url": "http://localhost:5050/app.html",
+        "uuid": "openfin-app",
+        "autoShow": true,
+        "saveWindowState": true
+    },
 	"runtime": {
 		"arguments": "--v=1 --inspect",
-		"version": "canary"
+		"version": "22.94.67.8"
 	},
-	"platform": {
+	"_platform": {
 		"icon": "http://localhost:5050/assets/icon.png",
 		"uuid": "openfin-platform-template-ts",
 		"autoShow": true,
@@ -28,7 +34,7 @@
 			}
 		}
 	},
-	"snapshot": {
+	"_snapshot": {
         "windows": [
             {
                 "name": "openfin-platform-template-window",
@@ -43,6 +49,13 @@
                                     "componentName": "view",
                                     "componentState": {
                                         "url": "http://localhost:5050/app.html"
+                                    }
+                                },
+								{
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "url": "chrome://crash"
                                     }
                                 }
                             ]
